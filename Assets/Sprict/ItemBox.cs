@@ -1,4 +1,4 @@
-// ItemBox.cs
+// ItemBox.cs (修正版)
 using UnityEngine;
 
 [System.Serializable]
@@ -21,17 +21,32 @@ public class ItemBox : MonoBehaviour
     [SerializeField] private bool hideOnPickup = true;
     [SerializeField] private float respawnTime = 10f;
 
+    // ★★★【変更点】ここから ★★★
     private void OnTriggerEnter(Collider other)
     {
         KartController kart = other.GetComponent<KartController>();
-        if (kart != null && !kart.HasItem())
+
+        // 接触したのがカートなら処理を開始
+        if (kart != null)
         {
-            ItemType selectedItem = ChooseItem();
-            kart.AcquireItem(selectedItem);
-            Debug.Log(kart.name + " が " + selectedItem.ToString() + " を取得！");
+            // アイテムを持っていない場合のみ、アイテムを抽選して付与する
+            if (!kart.HasItem())
+            {
+                ItemType selectedItem = ChooseItem();
+                kart.AcquireItem(selectedItem);
+                Debug.Log(kart.name + " が " + selectedItem.ToString() + " を取得！");
+            }
+            else
+            {
+                // 既にアイテムを持っている場合は、メッセージだけ表示する
+                Debug.Log(kart.name + " は既にアイテムを持っています。");
+            }
+
+            // カートが触れたら（アイテム所持状況に関わらず）ボックスは消える
             HandlePickup();
         }
     }
+    // ★★★【変更点】ここまで ★★★
 
     private ItemType ChooseItem()
     {
@@ -59,8 +74,9 @@ public class ItemBox : MonoBehaviour
     {
         if (hideOnPickup)
         {
-            GetComponent<Renderer>().enabled = false;
+            // コライダーを先に無効化して、複数回触れるのを防ぐ
             GetComponent<Collider>().enabled = false;
+            GetComponent<Renderer>().enabled = false;
             Invoke(nameof(Respawn), respawnTime);
         }
     }

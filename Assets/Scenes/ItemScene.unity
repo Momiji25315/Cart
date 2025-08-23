@@ -400,7 +400,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -755,13 +755,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6982494505673614381, guid: 36c00e9c4b321ca4abc438aa94640f75, type: 3}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: followCamera
+      value: 
+      objectReference: {fileID: 670003260}
+    - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: greenShellPrefab
       value: 
       objectReference: {fileID: 5831287328565296163, guid: 9c92423f18730134e8b9896edeceefd5, type: 3}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: accelerationForce
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: cameraFollowSpeed
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: gessoOverlayImage
       value: 
       objectReference: {fileID: 30470828}
+    - target: {fileID: 3998521798066373886, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4901772132538634550, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -869,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[0].itemType
@@ -880,12 +896,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[2].itemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[0].probability
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[1].probability
-      value: 50
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[2].probability
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
