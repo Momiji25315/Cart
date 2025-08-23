@@ -763,17 +763,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5831287328565296163, guid: 9c92423f18730134e8b9896edeceefd5, type: 3}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: kartBodyRenderer
+      value: 
+      objectReference: {fileID: 1297662240}
+    - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: accelerationForce
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: cameraFollowSpeed
-      value: 99999
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: gessoOverlayImage
       value: 
       objectReference: {fileID: 30470828}
+    - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+      propertyPath: gessoSelfUseDebug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3998521798066373886, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -827,6 +835,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+--- !u!23 &1297662240 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7574713094314652441, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
+  m_PrefabInstance: {fileID: 1187382848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025595748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -885,7 +898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[0].itemType
@@ -900,16 +913,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[3].itemType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[4].itemType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[0].probability
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[1].probability
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
       propertyPath: itemProbabilities.Array.data[2].probability
-      value: 30
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[3].probability
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851865544262527530, guid: e5be1064ed87ef142aba2269ecfdeaf3, type: 3}
+      propertyPath: itemProbabilities.Array.data[4].probability
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

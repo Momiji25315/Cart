@@ -1,4 +1,4 @@
-// KartController.cs (停止時ブースト強化版)
+// KartController.cs (調整箇所をコメントで明記した完全版)
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class KartController : MonoBehaviour
 {
     #region Inspector Variables
-    // (変更なし)
     [Header("カーの性能設定")]
     [SerializeField] private float maxSpeed = 25f;
     [SerializeField] private float accelerationForce = 300f;
@@ -29,10 +28,13 @@ public class KartController : MonoBehaviour
     [SerializeField] private GameObject greenShellPrefab;
     [SerializeField] private GameObject bananaPrefab;
     [SerializeField] private Image gessoOverlayImage;
+    [Tooltip("スター使用時に光らせるカートのボディ部分のレンダラー")]
+    [SerializeField] private Renderer kartBodyRenderer;
+    [Header("デバッグ設定")]
+    [SerializeField] private bool gessoSelfUseDebug = false;
     #endregion
 
     #region Internal State Variables
-    // (変更なし)
     private Rigidbody rb;
     private float horizontalInput;
     private bool isAccelerating, isBraking;
@@ -41,18 +43,18 @@ public class KartController : MonoBehaviour
     private float originalMaxSpeed;
     private bool isTurboActive, isStunned, isInvincible, isVisionBlocked;
     private float turboTimer, stunTimer, invincibleTimer, visionBlockTimer, driftTimer;
+    private Color originalEmissionColor;
+    private float starColorHue = 0f;
     #endregion
 
     #region Unity Lifecycle Methods
-    // (変更なし)
-    void Start() { rb = GetComponent<Rigidbody>(); rb.centerOfMass = new Vector3(0, -0.5f, 0); if (followCamera == null) followCamera = Camera.main; if (gessoOverlayImage != null) gessoOverlayImage.gameObject.SetActive(false); originalMaxSpeed = maxSpeed; gameObject.tag = "Player"; }
-    void Update() { HandleTimers(); if (isStunned) return; ProcessInputs(); CheckGrounded(); HandleShiftInput(); if (Input.GetKeyDown(KeyCode.F)) UseItem(); }
+    void Start() { rb = GetComponent<Rigidbody>(); rb.centerOfMass = new Vector3(0, -0.5f, 0); if (followCamera == null) followCamera = Camera.main; if (gessoOverlayImage != null) gessoOverlayImage.gameObject.SetActive(false); originalMaxSpeed = maxSpeed; gameObject.tag = "Player"; if (kartBodyRenderer != null) { kartBodyRenderer.material.EnableKeyword("_EMISSION"); originalEmissionColor = kartBodyRenderer.material.GetColor("_EmissionColor"); } }
+    void Update() { HandleTimers(); if (isStunned) return; ProcessInputs(); CheckGrounded(); HandleShiftInput(); if (Input.GetKeyDown(KeyCode.F)) UseItem(); if (isInvincible && kartBodyRenderer != null) { starColorHue += Time.deltaTime * 2f; if (starColorHue > 1f) starColorHue -= 1f; Color rainbowColor = Color.HSVToRGB(starColorHue, 1f, 1f); kartBodyRenderer.material.SetColor("_EmissionColor", rainbowColor); } }
     void FixedUpdate() { if (isStunned) { rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, Time.fixedDeltaTime * 5f); return; } HandleMovement(); HandleTurning(); }
     void LateUpdate() { HandleCamera(); }
     #endregion
 
     #region Core Movement
-    // (変更なし)
     private void ProcessInputs() { horizontalInput = Input.GetAxis("Horizontal"); isAccelerating = Input.GetKey(KeyCode.W); isBraking = Input.GetKey(KeyCode.S); }
     private void HandleMovement() { if (isTurboActive) rb.AddForce(transform.forward * turboForce, ForceMode.Acceleration); float currentForwardSpeed = Vector3.Dot(rb.linearVelocity, transform.forward); if (isAccelerating && (isTurboActive || currentForwardSpeed < maxSpeed) && isGrounded) { rb.AddForce(transform.forward * accelerationForce, ForceMode.Acceleration); } if (isBraking && !isAccelerating && currentForwardSpeed > 0) { rb.AddForce(-transform.forward * brakeForce, ForceMode.Acceleration); } }
     private void HandleTurning() { float turnMultiplier = isDrifting ? driftTurnMultiplier : 1f; float turnAmount = horizontalInput * turnStrength * turnMultiplier * Time.fixedDeltaTime; Quaternion turnRotation = Quaternion.Euler(0f, turnAmount, 0f); rb.MoveRotation(rb.rotation * turnRotation); }
@@ -62,10 +64,9 @@ public class KartController : MonoBehaviour
     #endregion
 
     #region Item Logic
-    // (変更なし)
     public void AcquireItem(ItemType newItem) { if (currentItem == ItemType.None) currentItem = newItem; }
     public bool HasItem() { return currentItem != ItemType.None; }
-    private void UseItem() { if (currentItem == ItemType.None) return; bool upKeyPressed = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow); bool downKeyPressed = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow); switch (currentItem) { case ItemType.Mushroom: ApplySpeedBoost(turboForce, 2f); break; case ItemType.Star: BecomeInvincible(7f); break; case ItemType.GreenShell: LaunchGreenShell(downKeyPressed); break; case ItemType.Banana: PlaceBanana(upKeyPressed); break; case ItemType.Thunder: ApplyEffectToOpponents(kart => kart.GetStruckByThunder(10f)); break; case ItemType.Gesso: ApplyEffectToOpponents(kart => kart.ApplyGessoEffect(8f)); break; } Debug.Log(currentItem.ToString() + " を使用！"); currentItem = ItemType.None; }
+    private void UseItem() { if (currentItem == ItemType.None) return; bool upKeyPressed = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow); bool downKeyPressed = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow); switch (currentItem) { case ItemType.Mushroom: ApplySpeedBoost(turboForce, 2f); break; case ItemType.Star: BecomeInvincible(7f); break; case ItemType.GreenShell: LaunchGreenShell(downKeyPressed); break; case ItemType.Banana: PlaceBanana(upKeyPressed); break; case ItemType.Thunder: ApplyEffectToOpponents(kart => kart.GetStruckByThunder(10f)); break; case ItemType.Gesso: if (gessoSelfUseDebug) { ApplyGessoEffect(8f); } else { ApplyEffectToOpponents(kart => kart.ApplyGessoEffect(8f)); } break; } Debug.Log(currentItem.ToString() + " を使用！"); currentItem = ItemType.None; }
     private void LaunchGreenShell(bool backwards) { if (greenShellPrefab == null) return; Vector3 direction = backwards ? -transform.forward : transform.forward; Vector3 spawnPos = transform.position + direction * 2f; GameObject shell = Instantiate(greenShellPrefab, spawnPos, transform.rotation); shell.GetComponent<GreenShell>().Initialize(this, direction); }
     private void PlaceBanana(bool forwards) { if (bananaPrefab == null) return; Vector3 spawnPos = forwards ? transform.position + transform.forward * 2f : transform.position - transform.forward * 2f; GameObject banana = Instantiate(bananaPrefab, spawnPos, transform.rotation); banana.GetComponent<Banana>().Initialize(this); }
     private void ApplyEffectToOpponents(System.Action<KartController> effect) { foreach (var kart in FindObjectsByType<KartController>(FindObjectsSortMode.None)) { if (kart != this) effect(kart); } }
@@ -77,20 +78,20 @@ public class KartController : MonoBehaviour
     public void GetStruckByThunder(float duration) { if (!isInvincible) GetHit(duration); }
     public void ApplyGessoEffect(float duration) { if (!isInvincible) { isVisionBlocked = true; visionBlockTimer = duration; if (gessoOverlayImage != null) gessoOverlayImage.gameObject.SetActive(true); } }
 
-    // ★★★【変更点】ここから ★★★
+    /// <summary>
+    /// 加速ブーストを適用します。キノコとドリフトターボの両方から呼び出されます。
+    /// </summary>
     private void ApplySpeedBoost(float force, float duration)
     {
         isTurboActive = true;
         turboTimer = duration;
 
-        // 停止状態からのブーストを確実にするため、最初の一撃としてImpulse（衝撃）を与える
-        // forceの値をそのまま使うと強すぎるため、適切な倍率をかける（この値は要調整）
-        rb.AddForce(transform.forward * (force * 0.1f), ForceMode.Impulse);
+        // ★★★ 停止状態からの押し出し力を調整する場所 ★★★
+        rb.AddForce(transform.forward * (force * 1f), ForceMode.Impulse);
     }
-    // ★★★【変更点】ここまで ★★★
 
     private void ReleaseTurbo() { ApplySpeedBoost(turboForce, turboDuration); }
     private void BecomeInvincible(float duration) { isInvincible = true; invincibleTimer = duration; maxSpeed *= 1.2f; }
-    private void HandleTimers() { if (isTurboActive) { turboTimer -= Time.deltaTime; if (turboTimer <= 0f) isTurboActive = false; } if (isStunned) { stunTimer -= Time.deltaTime; if (stunTimer <= 0f) isStunned = false; } if (isInvincible) { invincibleTimer -= Time.deltaTime; if (invincibleTimer <= 0f) { isInvincible = false; maxSpeed = originalMaxSpeed; } } if (isVisionBlocked) { visionBlockTimer -= Time.deltaTime; if (visionBlockTimer <= 0f) { isVisionBlocked = false; if (gessoOverlayImage != null) gessoOverlayImage.gameObject.SetActive(false); } } }
+    private void HandleTimers() { if (isTurboActive) { turboTimer -= Time.deltaTime; if (turboTimer <= 0f) isTurboActive = false; } if (isStunned) { stunTimer -= Time.deltaTime; if (stunTimer <= 0f) isStunned = false; } if (isInvincible) { invincibleTimer -= Time.deltaTime; if (invincibleTimer <= 0f) { isInvincible = false; maxSpeed = originalMaxSpeed; if (kartBodyRenderer != null) { kartBodyRenderer.material.SetColor("_EmissionColor", originalEmissionColor); } } } if (isVisionBlocked) { visionBlockTimer -= Time.deltaTime; if (visionBlockTimer <= 0f) { isVisionBlocked = false; if (gessoOverlayImage != null) gessoOverlayImage.gameObject.SetActive(false); } } }
     #endregion
 }
