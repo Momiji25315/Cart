@@ -121,6 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113bfc98ea5a8ca459abf901c1e806b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemProbabilities: []
+  itemProbabilities:
+  - itemType: 4
+    probability: 10
+  - itemType: 1
+    probability: 20
+  - itemType: 2
+    probability: 20
+  - itemType: 6
+    probability: 15
+  - itemType: 3
+    probability: 25
   hideOnPickup: 1
-  respawnTime: 10
+  respawnTime: 5
