@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &30470827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -780,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 30470828}
     - target: {fileID: 81841796906512040, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: gessoSelfUseDebug
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3998521798066373886, guid: f8d3fcdd89784924c860dca75d49b9f9, type: 3}
       propertyPath: m_UseGravity
