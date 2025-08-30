@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 159980102}
   - component: {fileID: 159980101}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
   isRainbowMode: 1
   baseColor: {r: 1, g: 0.84, b: 0, a: 1}
   glowIntensity: 0.5
-  glowSpeed: 5
+  glowSpeed: 2
 --- !u!114 &159980102
 MonoBehaviour:
   m_ObjectHideFlags: 0
