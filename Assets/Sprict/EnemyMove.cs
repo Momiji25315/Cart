@@ -33,24 +33,20 @@
 //    [Header("アイテム設定")]
 //    [Tooltip("プレイヤーがこの距離内に入った時にアイテムを使用します。")]
 //    public float itemUseProximityDistance = 20f;
-//    [Tooltip("プレイヤーがこの距離より離れた時にアイテムを即時使用します。")]
+//    [Tooltip("プレイヤーがこの距離以上離れた時にアイテムを使用します。")]
 //    public float itemUseFarDistance = 60f;
-//    // --- ここから追加 ---
-//    [Tooltip("アイテム使用中の走行速度です。")]
+//    [Tooltip("アイテム使用時の走行速度です。")]
 //    public float itemSpeed = 20f;
-//    [Tooltip("アイテムの効果が持続する時間（秒）です。")]
+//    [Tooltip("アイテム効果が持続する時間（秒）です。")]
 //    public float itemEffectDuration = 3.0f;
-//    // --- ここまで追加 ---
 
 
 //    // --- 内部で使用する変数 ---
 //    private int currentWaypointIndex = 0;
 //    private float currentSpeed;
 //    private bool isTurboActive = false;
+//    private bool isItemEffectActive = false; // アイテム効果が有効かどうかのフラグ
 //    private bool canUseItem = true; // アイテムの連続使用を防ぐフラグ
-//    // --- ここから追加 ---
-//    private bool isItemEffectActive = false; // アイテム効果が発動中かどうかのフラグ
-//    // --- ここまで追加 ---
 
 //    void Start()
 //    {
@@ -68,11 +64,36 @@
 
 //    void Update()
 //    {
+//        // 現在の状況に応じてNPCの速度を更新
+//        UpdateSpeed();
+
 //        // ウェイポイントに沿って移動する処理
 //        FollowWaypoints();
 
 //        // プレイヤーとの距離をチェックしてアイテムを使用する処理
 //        CheckDistanceAndUseItem();
+//    }
+
+//    /// <summary>
+//    /// NPCの状態（ターボ、アイテム効果）に応じて現在の速度を決定します。
+//    /// </summary>
+//    private void UpdateSpeed()
+//    {
+//        // ターボが有効な場合、ターボ速度を最優先
+//        if (isTurboActive)
+//        {
+//            currentSpeed = turboSpeed;
+//        }
+//        // ターボ中でなく、アイテム効果が有効な場合、アイテム速度を適用
+//        else if (isItemEffectActive)
+//        {
+//            currentSpeed = itemSpeed;
+//        }
+//        // どちらの効果も無効な場合、通常の移動速度に戻す
+//        else
+//        {
+//            currentSpeed = moveSpeed;
+//        }
 //    }
 
 //    /// <summary>
@@ -113,10 +134,8 @@
 //    /// </summary>
 //    private void CheckForCurveAndActivateTurbo()
 //    {
-//        // --- ここから変更 ---
-//        // ターボ中やアイテム効果中でなく、かつウェイポイントが3つ以上ある場合のみ判定
-//        if (!isTurboActive && !isItemEffectActive && waypoints.Length >= 3)
-//        // --- ここまで変更 ---
+//        // ターボ中でなく、かつウェイポイントが3つ以上ある場合のみ判定
+//        if (!isTurboActive && waypoints.Length >= 3)
 //        {
 //            // 3つの連続したウェイポイントから2つのベクトルを計算
 //            // Vector1: 現在のウェイポイント -> 次のウェイポイント
@@ -145,14 +164,12 @@
 //    private IEnumerator ActivateTurbo()
 //    {
 //        isTurboActive = true;
-//        currentSpeed = turboSpeed;
-//        Debug.Log("ターボ発動！ 速度: " + currentSpeed);
+//        Debug.Log("ターボ発動！ 速度: " + turboSpeed);
 
 //        // 指定された時間だけ待機
 //        yield return new WaitForSeconds(turboDuration);
 
-//        // ターボを終了し、通常速度に戻す
-//        currentSpeed = moveSpeed;
+//        // ターボを終了
 //        isTurboActive = false;
 //        Debug.Log("ターボ終了。");
 //    }
@@ -185,16 +202,26 @@
 //    /// </summary>
 //    private void UseItem()
 //    {
-//        // --- ここから変更 ---
-//        // ターボ中、または既に他のアイテム効果が発動中の場合は使用しない
-//        if (isTurboActive || isItemEffectActive)
-//        {
-//            return;
-//        }
-
+//        // この関数内に、実際にアイテムを使う処理（例：アイテムを生成する、速度を上げるなど）を実装してください。
+//        Debug.Log("アイテムを使用！");
 //        // アイテム効果を発動させるコルーチンを開始
 //        StartCoroutine(ActivateItemEffect());
-//        // --- ここまで変更 ---
+//    }
+
+//    /// <summary>
+//    /// アイテム効果を有効化し、一定時間後に解除するコルーチンです。
+//    /// </summary>
+//    private IEnumerator ActivateItemEffect()
+//    {
+//        isItemEffectActive = true;
+//        Debug.Log("アイテム効果発動！ 速度: " + itemSpeed);
+
+//        // 指定された時間だけ待機
+//        yield return new WaitForSeconds(itemEffectDuration);
+
+//        // アイテム効果を終了
+//        isItemEffectActive = false;
+//        Debug.Log("アイテム効果終了。");
 //    }
 
 //    /// <summary>
@@ -207,31 +234,6 @@
 //        yield return new WaitForSeconds(3.0f);
 //        canUseItem = true;
 //    }
-
-//    // --- ここから追加 ---
-//    /// <summary>
-//    /// アイテム効果を有効化し、一定時間後に解除するコルーチンです。
-//    /// </summary>
-//    private IEnumerator ActivateItemEffect()
-//    {
-//        isItemEffectActive = true;
-//        currentSpeed = itemSpeed;
-//        Debug.Log("アイテム使用！ 速度が " + currentSpeed + " に変化。");
-
-//        // 指定された時間だけ待機
-//        yield return new WaitForSeconds(itemEffectDuration);
-
-//        // アイテム効果を終了し、通常速度に戻す
-//        // ただし、このコルーチンの待機中にターボが発動している可能性は低い（相互にチェックしているため）が、
-//        // 念のためターボ中でないことを確認してから通常速度に戻す
-//        if (!isTurboActive)
-//        {
-//            currentSpeed = moveSpeed;
-//        }
-//        isItemEffectActive = false;
-//        Debug.Log("アイテム効果終了。");
-//    }
-//    // --- ここまで追加 ---
 //}
 
 using System.Collections;
@@ -246,8 +248,8 @@ public class NPCController : MonoBehaviour
     public Transform[] waypoints;
 
     [Header("プレイヤー設定")]
-    [Tooltip("プレイヤーのTransformを設定してください。")]
-    public Transform player;
+    [Tooltip("プレイヤーのTransformを3つまで設定してください。")]
+    public Transform[] playerTransforms; // 複数のプレイヤーを管理する配列に変更
 
     [Header("基本性能")]
     [Tooltip("通常時の走行速度です。")]
@@ -295,6 +297,12 @@ public class NPCController : MonoBehaviour
             Debug.LogError("ウェイポイントが設定されていません！NPCが動作できません。");
             // 動作を停止
             this.enabled = false;
+        }
+
+        // プレイヤーが設定されているか確認
+        if (playerTransforms == null || playerTransforms.Length == 0)
+        {
+            Debug.LogWarning("プレイヤーが設定されていません。アイテム使用ロジックが機能しない可能性があります。");
         }
     }
 
@@ -416,16 +424,29 @@ public class NPCController : MonoBehaviour
     private void CheckDistanceAndUseItem()
     {
         // プレイヤーが設定されていない、またはアイテムが使用不可な場合は処理しない
-        if (player == null || !canUseItem)
+        if (playerTransforms == null || playerTransforms.Length == 0 || !canUseItem)
         {
             return;
         }
 
-        // プレイヤーとの距離を計算
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        bool shouldUseItem = false;
 
-        // プレイヤーが近くにいるか、または非常に遠くにいる場合にアイテムを使用
-        if (distanceToPlayer < itemUseProximityDistance || distanceToPlayer > itemUseFarDistance)
+        // 全てのプレイヤーに対して距離をチェック
+        foreach (Transform player in playerTransforms)
+        {
+            if (player == null) continue; // nullのプレイヤーはスキップ
+
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            // プレイヤーが近くにいるか、または非常に遠くにいる場合にアイテムを使用
+            if (distanceToPlayer < itemUseProximityDistance || distanceToPlayer > itemUseFarDistance)
+            {
+                shouldUseItem = true;
+                break; // いずれかのプレイヤーが条件を満たせばOK
+            }
+        }
+
+        if (shouldUseItem)
         {
             UseItem();
             // アイテムの連続使用を防ぐためにクールダウンを設定

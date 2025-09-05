@@ -18,6 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/100cc Vehicle selection Scene.unity
     guid: 142e9a27fb5e241489cbd2551ef67e40
   - enabled: 1
+    path: Assets/Scenes/ItemScene.unity
+    guid: d7f169b423b71864694bb641c1f86719
+  - enabled: 1
+    path: Assets/Scenes/ko-su1.unity
+    guid: 33be0d4ba84fc604d977f6dcec8f43fa
+  - enabled: 1
+    path: Assets/Scenes/ko-su2.unity
+    guid: c3962e346bd404441bbbb6d8875491e7
+  - enabled: 1
+    path: Assets/Scenes/MainMoveScene.unity
+    guid: 91c863f1af2d3864f9a74a82e76b4642
+  - enabled: 1
     path: Assets/Scenes/99999cc course selection scene.unity
     guid: bdb1275509065af4e9c62a47c78182bd
   - enabled: 1
