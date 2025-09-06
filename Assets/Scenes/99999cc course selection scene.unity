@@ -410,7 +410,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 99999cc course1 scene
+          m_StringArgument: ko-su1 99999
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 390184671}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4357199aa899f4a90f6b0b59e4c837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNameToLoad: 99999cc course1 scene
+  sceneNameToLoad: ko-su1 99999
 --- !u!1 &405050967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 99999cc course2 scene
+          m_StringArgument: ko-su2 99999
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2125434115}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4357199aa899f4a90f6b0b59e4c837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNameToLoad: 99999cc course2 scene
+  sceneNameToLoad: ko-su2 99999
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

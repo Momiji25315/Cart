@@ -21,14 +21,20 @@ EditorBuildSettings:
     path: Assets/Scenes/ItemScene.unity
     guid: d7f169b423b71864694bb641c1f86719
   - enabled: 1
-    path: Assets/Scenes/ko-su1.unity
+    path: Assets/Scenes/ko-su1 100.unity
     guid: 33be0d4ba84fc604d977f6dcec8f43fa
   - enabled: 1
-    path: Assets/Scenes/ko-su2.unity
+    path: Assets/Scenes/ko-su2 100.unity
     guid: c3962e346bd404441bbbb6d8875491e7
   - enabled: 1
     path: Assets/Scenes/MainMoveScene.unity
     guid: 91c863f1af2d3864f9a74a82e76b4642
+  - enabled: 1
+    path: Assets/Scenes/ko-su2 99999.unity
+    guid: e8a96276f900925448edad1b3720c919
+  - enabled: 1
+    path: Assets/Scenes/ko-su1 99999.unity
+    guid: b59ebaeaad62ade4f81ea1a42217ac85
   - enabled: 1
     path: Assets/Scenes/99999cc course selection scene.unity
     guid: bdb1275509065af4e9c62a47c78182bd
