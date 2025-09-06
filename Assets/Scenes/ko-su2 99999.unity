@@ -313,6 +313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aebfc22149f8d2a45a601caf54845bba, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aebfc22149f8d2a45a601caf54845bba, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -559,6 +563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -636,6 +644,10 @@ PrefabInstance:
     - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
       propertyPath: m_Name
       value: Freeway S-Curve (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -715,6 +727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -788,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1066,6 +1086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Highway Join Highway 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df7aef7b3f5b34f438e1f16d9f25c832, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df7aef7b3f5b34f438e1f16d9f25c832, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -1265,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1338,6 +1366,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2327,6 +2359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2620,6 +2656,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3409,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3895,6 +3939,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5608562482771979989, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Size.x
@@ -4626,6 +4674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4765,6 +4817,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5025,6 +5081,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5402,6 +5462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gool
       objectReference: {fileID: 0}
+    - target: {fileID: 8130717204859662770, guid: f7d20782c73171641a0b393497a7540a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5562,6 +5626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5635,6 +5703,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5744,6 +5816,10 @@ PrefabInstance:
     - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
       propertyPath: m_Name
       value: Freeway S-Curve (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5934,6 +6010,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6715,6 +6795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6792,6 +6876,10 @@ PrefabInstance:
     - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
       propertyPath: m_Name
       value: Freeway S-Curve (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7101,6 +7189,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7515,6 +7607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7607,6 +7703,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7774,6 +7874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7878,6 +7982,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8063,6 +8171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8136,6 +8248,10 @@ PrefabInstance:
     - target: {fileID: 8130717204859662770, guid: f7d20782c73171641a0b393497a7540a, type: 3}
       propertyPath: m_Name
       value: tyuukan2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130717204859662770, guid: f7d20782c73171641a0b393497a7540a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8533,7 +8649,7 @@ GameObject:
   - component: {fileID: 1278998192}
   m_Layer: 0
   m_Name: f
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8913,6 +9029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9231,6 +9351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9384,6 +9508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9458,6 +9586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9528,6 +9660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9549,6 +9685,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
       propertyPath: m_Name
       value: Highway Bridge 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
       propertyPath: m_LocalScale.x
@@ -9878,6 +10018,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10319,6 +10463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5608562482771979989, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Size.y
       value: 2.4355333
@@ -10505,6 +10653,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
       propertyPath: m_Name
       value: Highway Bridge 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
       propertyPath: m_LocalScale.x
@@ -11085,6 +11237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Highway Bridge 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 306a3142baf3c0f48acf183ab9a53a05, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -11243,6 +11399,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11509,6 +11669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11663,6 +11827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway S-Curve
       objectReference: {fileID: 0}
+    - target: {fileID: 7761942280443153979, guid: 759eb030f2911d440bd8d819847a1683, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11767,6 +11935,10 @@ PrefabInstance:
     - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
       propertyPath: m_Name
       value: Freeway Straight 2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11958,6 +12130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11968,6 +12144,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6248004565473465716, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
   m_PrefabInstance: {fileID: 2048974407}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2055060921
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1530118658654075940, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_Name
+      value: DeadZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6572.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1021.7489
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575219132394118078, guid: ca965a159b2764447acccf3df804054f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca965a159b2764447acccf3df804054f, type: 3}
 --- !u!1001 &2057555988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12035,6 +12268,10 @@ PrefabInstance:
     - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
       propertyPath: m_Name
       value: Freeway Curve 1(Clone) (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706890109374110734, guid: e693d1af2e16ac94fb26d20fca334fa3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12382,6 +12619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5608562482771979989, guid: 2e6e5374d7e91534ba5df6f6ab463a4d, type: 3}
       propertyPath: m_Size.y
       value: 2.5243242
@@ -12460,6 +12701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: suta-to
       objectReference: {fileID: 0}
+    - target: {fileID: 6760606472709916882, guid: c89439f3d57ea794c82bd8a6fca8801f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7439193831342739364, guid: c89439f3d57ea794c82bd8a6fca8801f, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -12534,6 +12779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freeway Straight 2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2247454477956577383, guid: 144f63f53d1e02b498dace557e8e2009, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12563,6 +12812,10 @@ PrefabInstance:
     - target: {fileID: 2940062078938028473, guid: 282769290191f50429c4d448085f8298, type: 3}
       propertyPath: m_Name
       value: Freeway Join Road
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940062078938028473, guid: 282769290191f50429c4d448085f8298, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2940062078938187161, guid: 282769290191f50429c4d448085f8298, type: 3}
       propertyPath: m_LocalScale.y
@@ -12637,6 +12890,10 @@ PrefabInstance:
     - target: {fileID: 782848819708102261, guid: d852494c9e3515c489d16265662ff958, type: 3}
       propertyPath: m_Name
       value: tyuukan
+      objectReference: {fileID: 0}
+    - target: {fileID: 782848819708102261, guid: d852494c9e3515c489d16265662ff958, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5007690843435765969, guid: d852494c9e3515c489d16265662ff958, type: 3}
       propertyPath: m_IsTrigger
@@ -12736,3 +12993,4 @@ SceneRoots:
   - {fileID: 1029480490}
   - {fileID: 1771313163}
   - {fileID: 284230961}
+  - {fileID: 2055060921}
